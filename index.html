@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZeroTPS — Minecraft Server as a Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --card: #0f0f0f;
+      --text: #ffffff;
+      --muted: #9ca3af;
+      --accent: #6366f1;
+      --border: #1f2937;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #0b0b0b, var(--bg));
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    section { padding: 120px 8vw; }
+
+    h1, h2, h3, h4 { letter-spacing: -0.03em; }
+
+    h1 { font-size: clamp(3rem, 8vw, 6rem); font-weight: 800; }
+    h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 32px; }
+    h3 { font-size: 1.6rem; margin-bottom: 12px; }
+    h4 { font-size: 1.1rem; margin: 16px 0 8px; }
+
+    p, li {
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 820px;
+    }
+
+    ul { padding-left: 18px; margin-top: 8px; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      width: fit-content;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 16px 40px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(99,102,241,.35);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #111, #0a0a0a);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 36px;
+      transition: transform .3s ease, border .3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 20px 0;
+    }
+
+    .muted { color: var(--muted); font-size: 0.95rem; }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      padding: 80px 8vw;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero fade">
+    <span class="badge">We take away your pain</span>
+    <h1>ZeroTPS</h1>
+    <p>Minecraft Server as a Service. I design, build, secure, and manage Minecraft servers — from first launch to enterprise-scale networks.</p>
+    <a href="#contact" class="btn">Launch Your Server</a>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section class="fade">
+    <h2>What I Do</h2>
+    <p>I help creators, communities, and investors launch Minecraft servers properly — with the right maps, plugins, anticheat, Discord integration, and long-term management. You get a production-ready server, not a weekend setup.</p>
+  </section>
+
+  <!-- MARKETING & AFFILIATES -->
+  <section class="fade">
+    <h2>Marketing & Affiliate Network</h2>
+    <ul>
+      <li>Affiliate program for launch and long-term growth</li>
+      <li>Partnering with Minecraft YouTubers using custom affiliate links</li>
+      <li>Partnering with existing Minecraft servers (automated in-chat ads every 20 minutes)</li>
+      <li>Partnering with Discord servers via referral links</li>
+      <li>Affiliate partners get access to a private Discord with giveaways</li>
+      <li>Option for servers: become an affiliate or use my services and receive a partner link</li>
+    </ul>
+  </section>
+
+  <!-- PLANS -->
+  <section class="fade">
+    <h2>Plans</h2>
+    <div class="cards">
+
+      <!-- STARTER -->
+      <div class="card">
+        <h3>Starter — Build Only</h3>
+        <p class="muted">One-time professional server build</p>
+        <div class="price">$499</div>
+        <h4>Includes</h4>
+        <ul>
+          <li>Server planning (maps + plugins for your use case)</li>
+          <li>One gamemode (Survival OR Minigames)</li>
+          <li>Prebuilt map installation & setup</li>
+          <li>Core plugin configuration</li>
+          <li>Basic anticheat setup</li>
+          <li>Server registration on Minecraft server lists</li>
+          <li>Discord server setup (channels, roles, basic bots)</li>
+          <li>30 days limited support (critical issues only)</li>
+        </ul>
+        <p class="muted">No ongoing management. No major changes after handoff.</p>
+      </div>
+
+      <!-- MANAGED -->
+      <div class="card">
+        <h3>Managed — Build + Monthly</h3>
+        <p class="muted">Your main offer</p>
+        <div class="price">$499 + $199/mo</div>
+        <h4>Everything in Starter, plus</h4>
+        <ul>
+          <li>Plugin updates & maintenance</li>
+          <li>Active anticheat tuning & improvement</li>
+          <li>Minor configuration improvements</li>
+          <li>Discord ↔ Minecraft chat integration</li>
+          <li>Custom Dynmap (Survival / Anarchy)</li>
+          <li>Priority support</li>
+          <li>6–8 hours/month work</li>
+          <li>24–48h response SLA</li>
+        </ul>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="card">
+        <h3>Enterprise — Managed Studio</h3>
+        <p class="muted">Application only</p>
+        <div class="price">$750–$1,500/mo</div>
+        <h4>Includes</h4>
+        <ul>
+          <li>Full project & infrastructure management</li>
+          <li>Hiring and managing freelancers</li>
+          <li>Custom builders for maps</li>
+          <li>Plugin developers (custom plugins, minigames, anticheat)</li>
+          <li>Website developers for your server</li>
+          <li>Marketing strategists for growth</li>
+          <li>Weekly progress updates</li>
+        </ul>
+        <p class="muted">Freelancer costs added monthly + 15–25% management markup. 3–6 month minimum. Limited slots.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="fade">
+    <h2>Ready to Launch?</h2>
+    <p>Whether you’re starting fresh or scaling big — I’ll handle the technical side so you can focus on players.</p>
+    <a href="mailto:contact@zerotps.com" class="btn">Contact ZeroTPS</a>
+  </section>
+
+  <footer>
+    © 2026 ZeroTPS — One Man. Zero Lag. Zero Excuses.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
